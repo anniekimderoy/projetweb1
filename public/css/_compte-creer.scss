@@ -1,0 +1,85 @@
+  .compte {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Quantico', sans-serif;
+
+    .conteneur {
+      background-color: #f2f2f2;
+      border-radius: 10px;
+      padding: 2rem;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+
+      h1 {
+        font-size: 2rem;
+        font-weight: bold;
+        margin-bottom: 2rem;
+        text-align: center;
+      }
+
+      a {
+        display: block;
+        margin-bottom: 1rem;
+        color: #BF211E;
+        text-decoration: none;
+        text-align: center;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+
+      section {
+        form {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+
+          input[type="text"],
+          input[type="email"],
+          input[type="password"] {
+            width: 300px;
+            padding: 0.8rem;
+            margin-bottom: 1rem;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 1rem;
+          }
+
+          select.form-select {
+            width: 330px;
+            padding: 0.8rem;
+            margin-bottom: 1rem;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 1rem;
+          }
+
+          input[type="submit"] {
+            background-color: #BF211E;
+            color: #fff;
+            padding: 0.8rem 1rem;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            cursor: pointer;
+
+            &:hover {
+              background-color: #A21815;
+            }
+          }
+        }
+
+        a {
+          margin-top: 1rem;
+          color: #555;
+          text-decoration: none;
+          text-align: center;
+
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }

@@ -1,0 +1,305 @@
+// ******************************************************************************************************************
+// DEBUT MENU
+// ******************************************************************************************************************
+main.menu {
+    display: flex;
+    flex-direction: column;
+    background-color: #161616;
+    color: #F6F6F6;
+    white-space: pre-line;
+
+    .header {
+        display: flex;
+        align-items: center;
+
+        h2 {
+            margin: 0;
+            margin-right: auto;
+            margin-left: 4vw;
+            font-size: 2.5vw;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        .legende {
+            display: flex;
+            align-items: center;
+            margin-right: 4vw;
+
+            p {
+                margin-right: 1vw;
+                font-size: 1vw;
+                font-weight: bold;
+            }
+
+            img {
+                margin-top: 2.5vh;
+                width: 2vw;
+            }
+        }
+    }
+
+    .categorie-principale {
+        margin-top: 2vh;
+        margin-left: 4vw;
+        margin-right: 4vw;
+
+        h3 {
+            font-size: 2vw;
+            text-align: center;
+            padding-bottom: 1vh;
+            border-bottom: 1px solid #F6F6F6;
+            margin-bottom: 1vh;
+        }
+
+        .liste-items {
+            display: flex;
+            flex-wrap: wrap;
+            margin: 0 -1vw;
+        }
+
+        .item {
+            flex-basis: 50%;
+            display: flex;
+            align-items: flex-start;
+            margin-top: 1vh;
+            box-sizing: border-box;
+            padding: 0 1vw;
+
+            h5 {
+                font-size: 1.2vw;
+                font-weight: bold;
+                margin: 0;
+            }
+
+            .image {
+                flex: 0 0 auto;
+                margin-right: 1vw;
+
+                img {
+                    width: 16vw;
+                    height: 35vh;
+                    border-radius: 10px;
+                    object-fit: cover;
+                    margin-top: 2vh;
+                }
+            }
+
+            .content {
+                flex: 1 1 auto;
+
+                .description {
+                    margin: 0;
+                    font-size: 1vw;
+                }
+
+                .prix {
+                    margin-top: 2vh;
+                    font-size: 1.2vw;
+                    font-weight: bold;
+                }
+            }
+
+            .sticker {
+                flex: 0 0 auto;
+                margin-left: auto;
+
+                img {
+                    width: 2vw;
+                    height: auto;
+                }
+            }
+        }
+    }
+
+    .sous-categorie {
+        margin: 0;
+
+        h4 {
+            font-size: 1.5vw;
+            margin-top: 2vh;
+            margin-bottom: 1vh;
+        }
+    }
+}
+
+// ******************************************************************************************************************
+// FIN MENU
+// ******************************************************************************************************************
+
+// ******************************************************************************************************************
+// DEBUT BREAKPOINTS
+// ******************************************************************************************************************
+
+/* iPad Version - Menu */
+@media only screen and (min-width: 481px) and (max-width: 1024px) {
+    main.menu {
+        .header {
+            h2 {
+                font-size: 30px;
+                margin-left: 2vw; 
+                margin-top: 2vh;
+            }
+
+            .legende {
+
+                p{
+                    font-size: 16px;
+                }
+                img {
+                    width: 3vw;
+                }
+            }
+        }
+
+        .categorie-principale {
+            h3 {
+                font-size: 25px;
+            }
+
+            .item {
+
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start; 
+                justify-content: center;
+
+                h5 {
+                    font-size: 18px;
+                }
+
+                .image {
+                    img {
+                        width: 30vw; 
+                        height: 30vh; 
+                    }
+                }
+
+                .content {
+                    .description {
+                        font-size: 16px; 
+                    }
+
+                    .prix {
+                        font-size: 18px; 
+                    }
+                }
+
+                .sticker {
+                    img {
+                        width: 3vw;
+                    }
+                }
+            }
+
+            .sous-categorie {
+                h4 {
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+}
+
+/* Mobile Version */
+@media only screen and (max-width: 480px) {
+
+    main.menu {
+
+        .header {
+
+            h2 {
+                font-size: 30px;
+                margin-top: 3vh;
+            }
+
+            .legende {
+                p {
+                    font-size: 18px;
+                }
+
+                img {
+                    width: 5vw;
+                }
+            }
+        }
+
+        .categorie-principale {
+            h3 {
+                font-size: 30px;
+                text-align: center;
+            }
+
+            .liste-items {
+                margin: 0;
+            }
+
+            .item {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+        
+                h5 {
+                    font-size: 18px;
+                    margin: 0;
+                }
+        
+                .sticker {
+                    display: block;
+                    margin: 0; 
+                    img {
+                        width: 6vw;
+                        height: auto;
+                    }
+                }
+        
+                .image {
+                    margin: 0;
+                    height: max-content;
+                    
+                    img {
+                        width: 80vw;
+                        height: 40vh;
+                        border-radius: 10px;
+                        object-fit: cover;
+                        display: block;
+                    }
+                }
+        
+                .content {
+                    flex: 1 1 auto;
+                    width: 80vw;
+                    height: auto;
+                    margin: 0;
+        
+                    .description {
+                        font-size: 16px;
+                        margin: 0;
+                    }
+        
+                    .prix {
+                        font-size: 18px;
+                        font-weight: bold;
+                        margin-top: 1vh;
+                    }
+                }
+            }
+        }
+
+        .sous-categorie {
+            margin: 0;
+
+            h4 {
+                font-size: 25px;
+                text-align: center;
+            }
+        }
+    }
+}
+
+
+
+// ******************************************************************************************************************
+// FIN BREAKPOINTS
+// ******************************************************************************************************************
